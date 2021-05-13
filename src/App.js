@@ -9,6 +9,7 @@ import Footer from './components/Footer';
 
 const App = () => {
   const [width] = GetWindowSize();
+  const [color, setColor] = useState('black');
 
   const tabMenu = [
     {linkText: 'Description', component: <Description />},
@@ -25,12 +26,12 @@ const App = () => {
         
         <div>{getPage}</div>
 
-        { width < 768 && <Image color="black"/>}
+        { width < 768 && <Image color={color}/>}
 
-        <Footer />
+        <Footer color={color} setColor={setColor}/>
       </div>
       <div className="col-right">
-        { width > 768 && <Image color="black"/>}
+        { width > 768 && <Image color={color}/>}
       </div>
     </div>
   );
