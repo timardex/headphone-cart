@@ -1,0 +1,16 @@
+@import "src/assets/styles/variables.scss";
+
+body {
+  background-color: $color_2;
+}
+
+#root {
+  padding: 1rem;
+}
+
+.App {
+  max-width: 1440px;
+  margin: auto;
+  background: $color_1;
+  padding: 1rem;
+}
