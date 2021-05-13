@@ -1,6 +1,13 @@
 @import "src/assets/styles/variables.scss";
+@import "src/assets/styles/mixin.scss";
 
-img {
-  max-width: 580px;
-  margin: auto;
+section {
+  img {
+    max-width: 380px;
+    margin: auto;
+
+    @include minScreen("tablet") {
+      max-width: 580px;
+    }
+  }
 }

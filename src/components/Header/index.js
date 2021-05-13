@@ -6,7 +6,11 @@ const Header = (props) => {
   const { tabMenu, page, setPage } = props
   return (
     <header className="header">
-      <p>All products</p>
+      <div className="all-products">
+        <i className="arrow-left"></i>
+        <span>All products</span>
+      </div>
+      
 
       <h1 className="title">
         Audio-Technica ATH-MSR7
