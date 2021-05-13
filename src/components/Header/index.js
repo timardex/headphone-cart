@@ -6,6 +6,12 @@ const Header = (props) => {
   const { tabMenu, page, setPage } = props
   return (
     <header className="header">
+      <p>All products</p>
+
+      <h1 className="title">
+        Audio-Technica ATH-MSR7
+        <small>2017 Best Headphones of the Year Award Winner</small>
+      </h1>
       <ul>
         {tabMenu.map((props, i) => (
           <li className={`link ${i === page ? 'active' : ''}`} key={i} onClick={() => setPage(i)}>

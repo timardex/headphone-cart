@@ -1,1 +1,37 @@
 @import "src/assets/styles/variables.scss";
+
+$border_size: 3px;
+
+.title {
+  small {
+    display: block;
+    font-size: 40%;
+    color: $color_4;
+  }
+}
+
+ul,
+p {
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+ul {
+  list-style: none;
+
+  li {
+    cursor: pointer;
+    display: inline-block;
+    padding: 0.5rem;
+    min-width: 100px;
+    text-align: center;
+    color: $color_4;
+    border-bottom: $border_size solid transparent;
+
+    &.active {
+      border-bottom: $border_size solid $color_3;
+      color: initial;
+    }
+  }
+}
