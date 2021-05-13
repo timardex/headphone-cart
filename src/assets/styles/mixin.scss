@@ -1,0 +1,21 @@
+/* Breakpoints */
+$breakpoints: (
+  "phone": 400px,
+  "phone-wide": 576px,
+  "small": 680px,
+  "tablet": 769px,
+  "desktop": 992px,
+  "max": 1200px,
+);
+
+@mixin minScreen($width, $type: min) {
+  @if map_has_key($breakpoints, $width) {
+    $width: map_get($breakpoints, $width);
+    @if $type == max {
+      $width: $width - 1px;
+    }
+    @media only screen and (#{$type}-width: $width) {
+      @content;
+    }
+  }
+}
