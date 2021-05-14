@@ -2,14 +2,22 @@ import React, { useState } from 'react';
 import GetWindowSize from './helpers/getWindowSize.js';
 
 import Header from './components/Header';
-import Description from './components/Description';
-import Details from './components/Details';
-import Image from './components/Image';
+import Product from './components/Product';
+import Description from './components/Product/Description';
+import Details from './components/Product/Details';
+import Image from './components/Product/Image';
 import Footer from './components/Footer';
 
 const App = () => {
   const [width] = GetWindowSize();
+
   const [color, setColor] = useState('black');
+  const colors = ['black', 'brown'];
+
+  const price = {
+    newPrice: '$59.99',
+    oldPrice: '$89.99',
+  };
 
   const tabMenu = [
     {linkText: 'Description', component: <Description />},
@@ -22,13 +30,23 @@ const App = () => {
   return (
     <div className="App">
       <div className="col-left">
-        <Header tabMenu={tabMenu} page={page} setPage={setPage}/>
-        
-        <div>{getPage}</div>
+        <Header
+          title="Audio-Technica ATH-MSR7"
+          subTitle="2017 Best Headphones of the Year Award Winner"
+          tabMenu={tabMenu}
+          page={page}
+          setPage={setPage}/>
+
+        <Product
+          getPage={getPage}
+          price={price}
+          colors={colors}
+          color={color}
+          setColor={setColor}/>
 
         { width < 768 && <Image color={color}/>}
 
-        <Footer color={color} setColor={setColor}/>
+        <Footer />
       </div>
       <div className="col-right">
         { width > 768 && <Image color={color}/>}

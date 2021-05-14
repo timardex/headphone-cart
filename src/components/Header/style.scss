@@ -1,7 +1,5 @@
 @import "src/assets/styles/variables.scss";
 
-$border_size: 3px;
-
 .header {
   .all-products {
     display: flex;
@@ -39,7 +37,7 @@ $border_size: 3px;
   }
 
   .title {
-    margin: 3.5rem 0;
+    margin: 2.5rem 0;
     small {
       display: block;
       font-size: 45%;
@@ -51,20 +49,36 @@ $border_size: 3px;
   ul {
     list-style: none;
     margin-bottom: 2rem;
-    padding: 0;
+    border-bottom: 1px solid $color_2;
 
     li {
       cursor: pointer;
       display: inline-block;
+      position: relative;
       padding: 0.5rem;
       min-width: 100px;
       text-align: center;
       color: $color_4;
-      border-bottom: $border_size solid transparent;
+
+      &:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -2px;
+        width: 0;
+        height: 3px;
+        margin: auto;
+        transition: $transition_3;
+        background: $color_3;
+      }
 
       &.active {
-        border-bottom: $border_size solid $color_3;
         color: initial;
+
+        &:after {
+          width: 100%;
+        }
       }
     }
   }

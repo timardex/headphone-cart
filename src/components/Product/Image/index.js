@@ -5,7 +5,7 @@ const Image = (props) => {
   const { color } = props;
   return (
     <section>
-      <img src={require(`../../assets/images/ath-msr7-${color}.jpg`).default} alt={`Headphone ${color}`}/>
+      <img src={require(`../../../assets/images/ath-msr7-${color}.jpg`).default} alt={`Headphone ${color}`}/>
     </section>
   );
 }

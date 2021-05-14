@@ -1,33 +1,6 @@
 @import "src/assets/styles/variables.scss";
 
 .footer {
-  margin-top: 3rem;
-
-  .price {
-    margin: 0;
-    span {
-      color: $color_4;
-      text-decoration: line-through;
-    }
-  }
-
-  .form-group {
-    margin: 2rem 0;
-    label {
-      display: block;
-      font-weight: 700;
-      text-transform: uppercase;
-      margin-bottom: 0.5rem;
-      font-size: 0.8rem;
-    }
-
-    select {
-      width: 150px;
-      padding: 0.5rem;
-      border-radius: 0.2rem;
-      border-color: $color_4;
-      text-transform: capitalize;
-      outline-color: $color_3;
-    }
-  }
+  margin-top: 2rem;
+  border-top: 1px solid $color_2;
 }
