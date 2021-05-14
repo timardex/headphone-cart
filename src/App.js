@@ -11,6 +11,10 @@ import Footer from './components/Footer';
 const App = () => {
   const [width] = GetWindowSize();
 
+  const getImagePath = (name) => {
+    return require(`./assets/images/${name}.jpg`).default;
+  }
+
   const [color, setColor] = useState('black');
   const colors = ['black', 'brown'];
 
@@ -44,12 +48,12 @@ const App = () => {
           color={color}
           setColor={setColor}/>
 
-        { width < 768 && <Image color={color}/>}
+        { width < 768 && <Image imagePath={getImagePath(`ath-msr7-${color}`)}/>}
 
         <Footer />
       </div>
       <div className="col-right">
-        { width > 768 && <Image color={color}/>}
+        { width > 768 && <Image imagePath={getImagePath(`ath-msr7-${color}`)}/>}
       </div>
     </div>
   );

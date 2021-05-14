@@ -37,12 +37,6 @@ img {
   display: block;
 }
 
-section {
-  p {
-    line-height: 1.3rem;
-  }
-}
-
 button {
   text-transform: uppercase;
   display: inline-block;
@@ -55,7 +49,7 @@ button {
   -ms-user-select: none;
   user-select: none;
   background-color: $color_3;
-  border: 3px solid transparent;
+  border: 2px solid transparent;
   padding: 1rem 1.75rem;
   min-width: 250px;
   font-size: 0.8rem;
@@ -66,7 +60,7 @@ button {
 
   &:hover {
     background-color: transparent;
-    border: 3px solid $color_3;
+    border: 2px solid $color_3;
     color: $color_3;
   }
 }

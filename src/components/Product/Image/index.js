@@ -2,10 +2,10 @@ import React from 'react';
 import './style.scss';
 
 const Image = (props) => {
-  const { color } = props;
+  const { imagePath } = props;
   return (
     <section>
-      <img src={require(`../../../assets/images/ath-msr7-${color}.jpg`).default} alt={`Headphone ${color}`}/>
+      <img src={imagePath} alt="Headphone"/>
     </section>
   );
 }

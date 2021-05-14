@@ -3,7 +3,7 @@
 
 section {
   img {
-    max-width: 250px;
+    max-width: 300px;
     margin: auto;
 
     @include minScreen("tablet") {
