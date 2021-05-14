@@ -2,7 +2,7 @@ import React from 'react';
 import './style.scss';
 
 const Product = (props) => {
-  const { product, getPage, color, setColor, setToggleText } = props;
+  const { product, disabled, getPage, color, setColor, setToggleText } = props;
   const handleOnChange = (value) => {
     setColor(value);
     setToggleText('Add to Cart');
@@ -16,7 +16,7 @@ const Product = (props) => {
       <label htmlFor="select-color">Colors</label>
       <select value={color} onChange={e => handleOnChange(e.target.value)}>
           {product.colors.map((color, i) => (
-          <option value={color} key={i}>{color}</option>
+          <option value={color} key={i} disabled={disabled}>{color}</option>
           ))}
       </select>
       </div>

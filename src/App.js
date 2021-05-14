@@ -54,6 +54,7 @@ const App = () => {
 
         <Product
           product={productInfo}
+          disabled={toggleText.includes('Loading')}
           getPage={getPage}
           color={selectedColor}
           setColor={setColor}
