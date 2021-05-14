@@ -5,8 +5,13 @@ const Notification = (props) => {
   const { product, color } = props
   return (
     <div className="notification">
-      <p>{product.title} <span>{color}</span></p>
-      <p>added into cart</p>
+      <div className="inner">
+        <ul>
+          <li>Name: {product.title}</li>
+          <li>Color: {color}</li>
+        </ul>
+        <p>added into cart</p>
+      </div>
     </div>
   );
 }

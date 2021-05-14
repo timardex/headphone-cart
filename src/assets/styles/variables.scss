@@ -5,8 +5,9 @@ $color_3: #3f87f5;
 $color_4: #c7c7c7;
 
 /* Font */
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap");
-$font_1: "Roboto Condensed", sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap");
+$font_1: "Roboto", sans-serif;
 
 /* Other */
 $transition_3: all 0.3s ease;
+$size_desktop: 1024px;

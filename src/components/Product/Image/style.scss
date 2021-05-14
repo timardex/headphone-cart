@@ -3,8 +3,10 @@
 
 section {
   img {
+    width: 100%;
     max-width: 300px;
     margin: auto;
+    display: block;
 
     @include minScreen("tablet") {
       max-width: 580px;
