@@ -11,6 +11,7 @@ body {
   margin: auto;
   background: $color_1;
   display: block;
+  position: relative;
 
   @include minScreen("tablet") {
     display: flex;

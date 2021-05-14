@@ -3,7 +3,7 @@ import React from 'react';
 import './style.scss';
 
 const Header = (props) => {
-  const { title, subTitle, tabMenu, page, setPage } = props
+  const { product, tabMenu, page, setPage } = props
   return (
     <header className="header pt-3">
       <div className="all-products pl-3 pr-3">
@@ -13,8 +13,8 @@ const Header = (props) => {
       
 
       <h1 className="title pl-3 pr-3">
-        {title}
-        <small>{subTitle}</small>
+        {product.title}
+        <small>{product.subTitle}</small>
       </h1>
 
       <ul className="pl-3 pr-3">

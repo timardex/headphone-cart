@@ -1,0 +1,21 @@
+@import "src/assets/styles/variables.scss";
+
+.notification {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: auto;
+  width: fit-content;
+  text-align: center;
+  padding: 1rem;
+  background: $color_3;
+  color: $color_1;
+
+  p {
+    margin: 0;
+  }
+
+  span {
+    text-decoration: underline;
+  }
+}

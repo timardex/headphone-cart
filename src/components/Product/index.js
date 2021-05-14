@@ -2,16 +2,20 @@ import React from 'react';
 import './style.scss';
 
 const Product = (props) => {
-  const { getPage, price, colors, color, setColor } = props
+  const { product, getPage, color, setColor, setToggleText } = props;
+  const handleOnChange = (value) => {
+    setColor(value);
+    setToggleText('Add to Cart');
+  }
 
   return (
     <div className="content pl-3 pr-3">
       {getPage}
-      <h2 className="price">{price.newPrice} <span>{price.oldPrice}</span></h2>
+      <h2 className="price">{product.price.newPrice} <span>{product.price.oldPrice}</span></h2>
       <div className="form-group">
       <label htmlFor="select-color">Colors</label>
-      <select value={color} onChange={e => setColor(e.target.value)}>
-          {colors.map((color, i) => (
+      <select value={color} onChange={e => handleOnChange(e.target.value)}>
+          {product.colors.map((color, i) => (
           <option value={color} key={i}>{color}</option>
           ))}
       </select>
